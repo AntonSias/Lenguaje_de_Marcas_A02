@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
+
+     <libro id="L5043" tipo_clase="novela">
+        <titulo>La ultima tribu</titulo>
+        <capitulos>
+            <capitulo num="1" pag="11"><contenido>El pergamino de Ary</contenido></capitulo>
+            <capitulo num="2" pag="42"><contenido>El pergamino del Maestro</contenido> </capitulo>
+            <capitulo num="3" pag="82"><contenido>El pergamino de los Abismos</contenido></capitulo>
+            <capitulo num="4" pag="127"><contenido>El pergamino de las Tinieblas</contenido></capitulo>
+            <capitulo num="5" pag="164"><contenido>El pergamino de la Montaña</contenido></capitulo>
+            <capitulo num="6" pag="190"><contenido>El pergamino del Retiro</contenido></capitulo>
+            <capitulo num="7" pag="218"><contenido>El pergamino de los Demonios</contenido></capitulo>
+            <capitulo num="8" pag="245"><contenido>El pergamino de las Fiestas</contenido></capitulo>
+            <capitulo num="9" pag="267"><contenido>El pergamino de Ise</contenido></capitulo>
+            <capitulo num="10" pag="299"><contenido>El pergamino del Templo</contenido></capitulo>
+        </capitulos>
+        <sinopsis>Los restos momificados de un hombre son descubiertos en un santuario a las afueras de Kyoto y sostiene un fragmento de un manuscrito hebreo</sinopsis>  
+    </libro>
+
+    <revista id="R2130" tipo_clase="investigacion">
+        <titulo>Investigacion y Ciencia</titulo>
+        <numero>530</numero>
+        <secciones>
+            <seccion pag="3"><contenido>Grandes Hitos y Retos de la Ciencia</contenido></seccion>
+            <seccion><contenido>Biologia como se desplazan las células</contenido></seccion>        
+        </secciones>
+    </revista>
+
+    <libro id="L5043">
+        <titulo>Esther la Dama de Sefarad</titulo>
+    </libro>
+
+    <revista id="R2134">
+        <titulo>Farmaceuticos</titulo>
+        <numero>37</numero>
+    </revista>
+
+    <revista id="R2137">
+        <titulo>Historia y Vida</titulo>
+        <numero>656</numero>
+        <secciones>
+            <seccion pag="35"><contenido info="historia de Egipto">M.P.Queralt del Hierro</contenido></seccion>
+            <seccion><contenido info="">El legado de Tutankhamon</contenido></seccion>        
+        </secciones>
+    </revista>
+
+    <periodico id="P12530" fecha="2020-03-12">
+        <titulo>La Vanguardia</titulo>
+        <indice>
+            1- Al minuto
+            2- Internacional
+            3- Politica
+            4- Sociedad
+            5- Deportes
+            6- Economía
+            7- Opinión
+            8- Gente
+            9- Cultura
+            10- Sucesos
+        </indice>
+        <seccionesP>
+            <seccionP tipo="internacional"><articulo autor="Rafael Ramos"><contenido> Carlos III ya tienes su corona </contenido></articulo></seccionP>
+        </seccionesP> 
+    </periodico>
+</biblioteca>    
+
+
+
