@@ -51,11 +51,14 @@
                     </xs:complexType>              
                     </xs:element>
                      </xs:sequence> 
-                 <xs:attribute name="id" use="required" />
+                 <xs:attribute name="id" use="required" >
+                        <xs:simpleType>
                         <xs:restriction base="xs:string">
                             <pattern value="[R] [0-9]{4}"></pattern>
                         </xs:restriction>
-                        <xs:atributte name="numero_paginas" />
+                        </xs:simpleType>
+                        </xs:attribute>
+                        <xs:atributte name="numero_paginas" ></xs:atributte>
                    </xs:complexType>
                      </xs:element>
 
