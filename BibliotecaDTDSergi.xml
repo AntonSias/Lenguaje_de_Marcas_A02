@@ -1,13 +1,11 @@
-<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
-
-<!DOCTYPE Biblioteca [
-<!ELEMENT Biblioteca (libro, revista, periódico)*>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (libro |  revista |  periodico)*>
 <!ELEMENT libro (titulo, capitulo, indice, sipnosis)>
 <!ELEMENT titulo (#PCDATA)>
-<!ELEMENT capitulo (título, contenido)>
-
+<!ELEMENT capitulo (titulo, contenido)>
 <!ELEMENT contenido (#PCDATA)>
-<!ELEMENT índice (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
 <!ELEMENT sipnosis (#PCDATA)>
 
 <!ELEMENT revista (titulo, numero_revista, indice_de_contenido, seccion)>
@@ -19,9 +17,8 @@
 
 
 <!ELEMENT periodico (seccion, indice, contenido )>
-
 <!ELEMENT articulo (#PCDATA)>
-<!ELEMENT indice (#PCDATA)>
+
 
 
 <!--Definimos
@@ -40,16 +37,16 @@ atributos-->
 <!ATTLIST contenido enlace_informacion CDATA #REQUIRED>
 ]>
 
-<Biblioteca>
+<biblioteca>
 
     <libro id="L2564" tipo_clase="didactico" numero_paginas="361">
-        <título>Historia de los griegos</título>
-        <capítulo numero_paginas="10">
-            <título> Homero </título>
+        <titulo>Historia de los griegos</titulo>
+        <capitulo numero_paginas="10">
+            <titulo> Homero </titulo>
             <contenido informacion="wikipedia"> Resumen del capítulo</contenido>
-        </capítulo>
+        </capitulo>
 
-        <índice> Estructura Texto</índice>
+        <indice> Estructura Texto</indice>
         <sipnosis>Historia de los griegos constituye una obra inteligente y rigurosa ...</sipnosis>
     </libro>
 
@@ -71,7 +68,7 @@ atributos-->
         <indice></indice>
         <contenido enlace_informacion="www.elconfidencial.com">
             www.elconfidencial.con/economía/españa_en_la_encrucijada </contenido>
-    </periódico>
+    </periodico>
 
 
-</Biblioteca>   
+</biblioteca>   
