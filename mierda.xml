@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Biblioteca [
+<!ELEMENT Biblioteca (libro|revista|periodico)*>
+<!ELEMENT libro (titulo, capitulo+, sinopsis, indice)>
+<!ATTLIST libro id ID #REQUIRED
+                 tipo_clase CDATA #IMPLIED
+                 numero_paginas CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT capitulo (titulo, contenido)>
+<!ELEMENT contenido (#PCDATA)>
+<!ATTLIST contenido informacion CDATA #IMPLIED>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT revista (titulo, numero_revista, indice_contenido, seccion+)>
+<!ATTLIST revista id ID #REQUIRED
+                 tipo CDATA #IMPLIED
+                 numero_paginas CDATA #REQUIRED>
+<!ELEMENT numero_revista (#PCDATA)>
+<!ELEMENT indice_contenido (#PCDATA)>
+<!ELEMENT seccion (contenido)>
+<!ATTLIST seccion numero_paginas CDATA #REQUIRED
+                 enlace_informacion CDATA #IMPLIED>
+<!ELEMENT periodico (seccion+, indice, contenido)>
+<!ATTLIST periodico tipo_clase CDATA #REQUIRED>
+<!ELEMENT articulo (#PCDATA)>
+
+<!ATTLIST seccion autor CDATA #IMPLIED
+                 tipo CDATA #IMPLIED>
+
+]>
