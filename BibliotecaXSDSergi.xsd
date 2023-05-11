@@ -34,37 +34,37 @@
                     </xs:complexType>
                 </xs:element>
                 <!--revista-->
-                <xs:element name="revista">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="titulo" type="xs:string"/>
-                            <xs:element name="numero_revista" type="xs:integer"/>
-                            <xs:element name="indice_contenido" type="xs:string"/>
-                            <xs:element name="seccion" minOccurs="0" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="contenido" type="xs:string"/>
-                                    </xs:sequence>
-                                    <xs:attribute name="numero_paginas" type="xs:integer"/>
-                                    <xs:attribute name="enlace_informacion" type="xs:string"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                        <xs:attribute name="id" type="xs:string" use="required"/>
-                        <xs:attribute name="tipo_clase" type="xs:string" default="otros">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:enumeration value="informatica"/>
-                                    <xs:enumeration value="corazon"/>
-                                    <xs:enumeration value="coches"/>
-                                    <xs:enumeration value="investigacion"/>
-                                    <xs:enumeration value="otros"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:attribute>
-                        <xs:attribute name="numero_paginas" type="xs:integer"/>
-                    </xs:complexType>
-                </xs:element>
+<xs:element name="revista">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="numero_revista" type="xs:integer"/>
+            <xs:element name="indice_contenido" type="xs:string"/>
+            <xs:element name="seccion" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="contenido" type="xs:string"/>
+                    </xs:sequence>
+                    <xs:attribute name="numero_paginas" type="xs:integer"/>
+                    <xs:attribute name="enlace_informacion" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="tipo" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="informatica"/>
+                    <xs:enumeration value="corazon"/>
+                    <xs:enumeration value="coches"/>
+                    <xs:enumeration value="investigacion"/>
+                    <xs:enumeration value="otros"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="numero_paginas" type="xs:integer"/>
+    </xs:complexType>
+</xs:element>
                 <!--Periodico-->
                 <xs:element name="periodico">
                     <xs:complexType>
