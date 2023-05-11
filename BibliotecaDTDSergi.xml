@@ -37,38 +37,36 @@ atributos-->
 <!ATTLIST contenido enlace_informacion CDATA #REQUIRED>
 ]>
 
-<biblioteca>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<Biblioteca>
     <libro id="L2564" tipo_clase="didactico" numero_paginas="361">
-        <titulo>Historia de los griegos</titulo>
+        <titulo >Historia de los griegos</titulo>
         <capitulo numero_paginas="10">
-            <titulo> Homero </titulo>
+            <título> Homero </título>
             <contenido informacion="wikipedia"> Resumen del capítulo</contenido>
         </capitulo>
-
+        
         <indice> Estructura Texto</indice>
         <sipnosis>Historia de los griegos constituye una obra inteligente y rigurosa ...</sipnosis>
     </libro>
 
-<revista id="R5288" tipo_clase="otras" numero_paginas="105">
-        <titulo>Cahiers du cinema</titulo>
+    <revista id="R5288" numero_paginas="105">
+        <especialidad tipo_clase="otras">Cine</especialidad>
+        <título>Cahiers du cinema</título>
         <numero_revista>125</numero_revista>
-        <indice_de_contenido></indice_de_contenido>
-        <seccion numero_paginas="5">
-            <contenido enlace_informacion="www.cahiersducinema.com">
+        <seccion número_páginas="5">
+            <contenido enlace_información="www.cahiersducinema.com">
                 www.cahiersducinema.com/entrevistas/almodovar</contenido>
         </seccion>
     </revista>
 
-    <periodico id="P6923" fecha_publicacion="8-5-2023" tipo_clase="Nacional">
-
+    <periodico id="P6923" fecha_publicación="8-5-2023">
+        <clasifiacion tipo_clase="NA">Nacional</clasifiacion>
         <seccion tipo_sección="Economía">
             <articulos autor="Julio López"> España en la encrucijada del pleno empleo</articulos>
         </seccion>
-        <indice></indice>
-        <contenido enlace_informacion="www.elconfidencial.com">
-            www.elconfidencial.con/economía/españa_en_la_encrucijada </contenido>
+        <contenido enlace_información= "www.elconfidencial.com"> www.elconfidencial.con/economía/españa_en_la_encrucijada </contenido>
     </periodico>
 
 
-</biblioteca>   
+</Biblioteca>
