@@ -44,7 +44,7 @@
     <informatica Id="R0001" tipo_clase="informatica">
       <titulo>PC World</titulo>
       <numero>123</numero>
-      <indice enlace="http://informatica.com/indice"/>
+      <indice>"http://informatica.com/indice"</indice>
       <secciones>
         <seccion tipo="hardware" paginas="5">
           <contenido>Introducción al hardaware</contenido>
@@ -57,7 +57,7 @@
     <corazon Id="R0002" tipo_clase="corazón">
       <titulo>Cotilleos</titulo>
       <numero>666</numero>
-      <indice enlace="http://salsarosa.com/indice"/>
+      <indice>"http://salsarosa.com/indice"</indice>
       <secciones>
         <seccion tipo="entrevistas" paginas="4">
           <contenido>Entrevistas a los invitados</contenido>
@@ -77,6 +77,6 @@
             </sección>
             <indice/>
         </internacional> 
-        <contenido enlace= "www.elmundo.com"/> 
+        <contenido>"www.elmundo.com"</contenido> 
     </periódico>
 </biblioteca>
