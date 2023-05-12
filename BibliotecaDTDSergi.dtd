@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
-<!DOCTYPE Biblioteca [
 <!ELEMENT Biblioteca (libro|revista|periodico)*>
 <!ELEMENT libro (titulo, capitulo+, sinopsis, indice)>
 <!ATTLIST libro id ID #REQUIRED
@@ -27,5 +24,3 @@
 
 <!ATTLIST seccion autor CDATA #IMPLIED
                  tipo CDATA #IMPLIED>
-
-]>
