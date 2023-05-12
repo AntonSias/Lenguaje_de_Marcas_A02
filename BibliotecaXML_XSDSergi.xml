@@ -15,7 +15,7 @@
     <sinopsis>La contribución de Grecia a la civilizacion occidental es vasta y facinante.</sinopsis>
     <indice>Prólogo, Capítulo 1, Capítulo 2, Capítulo 3, ...</indice>
   </libro>
-  <revista id="R001" tipo="otras" numero_paginas="100">
+  <revista id="R001" tipo="otros" numero_paginas="100">
     <titulo>Cahiers du cinema</titulo>
     <numero_revista>123</numero_revista>
     <indice_contenido>Entrevistas, análisis, y crítica </indice_contenido>
@@ -27,7 +27,7 @@
     </seccion>
   </revista>
   <periodico tipo_clase="nacional">
-    <seccion autor="Zarzalejos" tipo="sociedad">
+    <seccion autor="Zarzalejos" tipo="opinion">
       <articulo>Una cura para el amor </articulo>
       <articulo>David Suarez contra el humor</articulo>
     </seccion>
