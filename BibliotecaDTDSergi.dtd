@@ -1,26 +1,31 @@
-<!ELEMENT Biblioteca (libro|revista|periodico)*>
+
+<!ELEMENT Biblioteca (libro | revista | periodico)*>
 <!ELEMENT libro (titulo, capitulo+, sinopsis, indice)>
-<!ATTLIST libro id ID #REQUIRED
-                 tipo_clase CDATA #IMPLIED
-                 numero_paginas CDATA #REQUIRED>
+<!ATTLIST libro id CDATA #REQUIRED>
+<!ATTLIST libro tipo_clase CDATA #IMPLIED>
+<!ATTLIST libro numero_paginas CDATA #IMPLIED>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT capitulo (titulo, contenido)>
 <!ELEMENT contenido (#PCDATA)>
 <!ATTLIST contenido informacion CDATA #IMPLIED>
 <!ELEMENT sinopsis (#PCDATA)>
 <!ELEMENT indice (#PCDATA)>
-<!ELEMENT revista (titulo, numero_revista, indice_contenido, seccion+)>
-<!ATTLIST revista id ID #REQUIRED
-                 tipo CDATA #IMPLIED
-                 numero_paginas CDATA #REQUIRED>
+<!ELEMENT revista (titulo, numero_revista, indice_contenido, seccionrevista+)>
+<!ATTLIST revista id ID #REQUIRED>
+<!ATTLIST revista tipo CDATA #IMPLIED>
+<!ATTLIST revista numero_paginasrevista CDATA #IMPLIED>
 <!ELEMENT numero_revista (#PCDATA)>
 <!ELEMENT indice_contenido (#PCDATA)>
-<!ELEMENT seccion (contenido)>
-<!ATTLIST seccion numero_paginas CDATA #REQUIRED
-                 enlace_informacion CDATA #IMPLIED>
-<!ELEMENT periodico (seccion+, indice, contenido)>
-<!ATTLIST periodico tipo_clase CDATA #REQUIRED>
-<!ELEMENT articulo (#PCDATA)>
-
-<!ATTLIST seccion autor CDATA #IMPLIED
-                 tipo CDATA #IMPLIED>
+<!ELEMENT seccionrevista (contenidorevista)>
+<!ATTLIST seccionrevista numero_paginas CDATA #IMPLIED>
+<!ATTLIST seccionrevista enlace_informacion CDATA #IMPLIED>
+<!ATTLIST seccionrevista tipo CDATA #IMPLIED>
+<!ELEMENT contenidorevista (#PCDATA)>
+<!ELEMENT periodico (seccionperiodico+, indiceperiodico, contenidoperiodico)>
+<!ATTLIST periodico tipo_clase CDATA #IMPLIED>
+<!ELEMENT seccionperiodico (articulo)* >
+<!ATTLIST seccionperiodico autor CDATA #IMPLIED>
+<!ATTLIST seccionperiodico tipo CDATA #IMPLIED>
+<!ELEMENT articulo (#PCDATA )>
+<!ELEMENT indiceperiodico (#PCDATA)>
+<!ELEMENT contenidoperiodico (#PCDATA)>
