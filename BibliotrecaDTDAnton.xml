@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca [
+
+<!ELEMENT biblioteca (libros, revistas, periódico)>
+<!ELEMENT libros (novela, infantil, didactico)>
+<!ELEMENT novela (titulo, capitulos, indice, sinopsis)>
+<!ELEMENT infantil (titulo, capitulos, indice, sinopsis)>
+<!ELEMENT didactico (titulo, capitulos, indice, sinopsis)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT capitulos (capitulo+)>
+<!ELEMENT capitulo (contenido)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ELEMENT revistas (informatica, corazon)>
+<!ELEMENT informatica (titulo, numero, indice, secciones)>
+<!ELEMENT corazon (titulo, numero, indice, secciones)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT secciones (seccion+)>
+<!ELEMENT seccion (contenido)>
+<!ELEMENT periódico (internacional, contenido)>
+<!ELEMENT internacional (sección, indice)>
+<!ELEMENT sección (artículos)>
+<!ELEMENT artículos (articulo+)>
+<!ELEMENT articulo (#PCDATA)>
+
+<!--ATRIBUTOS -->
+<!ATTLIST novela Id CDATA #REQUIRED tipo_clase CDATA #REQUIRED>
+<!ATTLIST infantil Id CDATA #REQUIRED tipo_clase CDATA #REQUIRED>
+<!ATTLIST didactico Id CDATA #REQUIRED tipo_clase CDATA #REQUIRED>
+<!ATTLIST capitulo titulo CDATA #REQUIRED paginas CDATA #REQUIRED>
+<!ATTLIST informatica Id CDATA #REQUIRED tipo_clase CDATA #REQUIRED>
+<!ATTLIST corazon Id CDATA #REQUIRED tipo_clase CDATA #REQUIRED>
+<!ATTLIST seccion tipo CDATA #REQUIRED paginas CDATA #REQUIRED>
+<!ATTLIST internacional id CDATA #REQUIRED tipo_clase CDATA #REQUIRED fecha_publicación CDATA #REQUIRED>
+<!ATTLIST sección tipo_sección CDATA #REQUIRED>
+<!ATTLIST articulo autor CDATA #IMPLIED>
+]>
+
+
+<biblioteca>
+  <libros>
+    <novela Id="L0001" tipo_clase="romance">
+      <titulo>Orgullo y prejuicio</titulo>
+      <capitulos>
+        <capitulo titulo="Capítulo 1" paginas="20">
+          <contenido>Introducción</contenido>
+        </capitulo>
+        <capitulo titulo="Capítulo 2" paginas="15">
+          <contenido>Se conocen los personajes</contenido>
+        </capitulo>
+      </capitulos>
+      <indice>Orgullo y prejuicio, publicada por primera vez el 28 de enero de 1813 como una
+       obra anónima, es la más famosa de las novelas de Jane Austen y una de las primeras 
+       comedias románticas en la historia de la novela.</indice>
+      <sinopsis>Una historia de amor no correspondida</sinopsis>
+    </novela>
+    <infantil Id="L0002" tipo_clase="didáctico">
+      <titulo>Teo en el zoo</titulo>
+      <capitulos>
+        <capitulo titulo="Capítulo 1" paginas="5">
+          <contenido>Desarrollo</contenido>
+        </capitulo>
+      </capitulos>
+      <indice>Estructura</indice>
+      <sinopsis>Teo va al zoo con su familia</sinopsis>
+    </infantil>
+    <didactico Id="L0003" tipo_clase="historia">
+      <titulo>Historia de España</titulo>
+      <capitulos>
+        <capitulo titulo="Capítulo 1" paginas="12">
+          <contenido>El imprerio español</contenido>
+        </capitulo>
+        <capitulo titulo="Capítulo 2" paginas="10">
+          <contenido>El descubrimineto de América</contenido>
+        </capitulo>
+      </capitulos>
+      <indice/>
+      <sinopsis>Un recorrido por la historia de España.</sinopsis>
+    </didactico>
+  </libros>
+  <revistas>
+    <informatica Id="R0001" tipo_clase="informatica">
+      <titulo>PC World</titulo>
+      <numero>123</numero>
+      <indice>"http://informatica.com/indice"</indice>
+      <secciones>
+        <seccion tipo="hardware" paginas="5">
+          <contenido>Introducción al hardaware</contenido>
+        </seccion>
+        <seccion tipo="software" paginas="8">
+          <contenido>Introducción al software</contenido>
+        </seccion>
+      </secciones>
+    </informatica>
+    <corazon Id="R0002" tipo_clase="corazón">
+      <titulo>Cotilleos</titulo>
+      <numero>666</numero>
+      <indice>"http://salsarosa.com/indice"</indice>
+      <secciones>
+        <seccion tipo="entrevistas" paginas="4">
+          <contenido>Entrevistas a los invitados</contenido>
+        </seccion>
+        <seccion tipo="oróscopo" paginas="6">
+          <contenido>Oróscopo de la semana</contenido>
+        </seccion>
+      </secciones>
+    </corazon>
+  </revistas>
+   <periódico>
+        <internacional id="P001" tipo_clase="Internacional" fecha_publicación="03/08/2023">
+            <sección tipo_sección="internacional">
+                <artículos>
+                    <articulo autor="Adam Smith"> Guerra de Ucrania</articulo>
+                </artículos>
+            </sección>
+            <indice/>
+        </internacional> 
+        <contenido>"www.elmundo.com"</contenido> 
+    </periódico>
+</biblioteca>
