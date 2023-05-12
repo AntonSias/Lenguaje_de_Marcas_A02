@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UFT-8"?>
+
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "Biblioteca.xsd">
+
+
+<biblioteca>
+
+   <libro id="L1234" tipo_clase="novela" numero_paginas="452" numero_capitulos="8" >
+         <titulo>El infinito en un junco</titulo>
+         <capitulos>
+            <capitulo numero_capitulos= "1"  numero_paginas="245"><contenido>Gracia imagina el futuro</contenido></capitulo>
+            <capitulo numero_capitulos= "2"  numero_paginas="394"><contenido>Loa caminos de Roma</contenido></capitulo>
+            <capitulo numero_capitulos= "3"  numero_paginas="399"><contenido>Los olvivados,las anonimas</contenido></capitulo>
+            <capitulo numero_capitulos= "4"  numero_paginas="403"><contenido>Agradecimientos</contenido></capitulo>
+            <capitulo numero_capitulos= "5"  numero_paginas="405"><contenido>Nota para la tribu del junco</contenido></capitulo>
+            <capitulo numero_capitulos= "6"  numero_paginas="408"><contenido>Notas</contenido></capitulo>
+            <capitulo numero_capitulos= "7"  numero_paginas="435"><contenido>Bibliografía</contenido></capitulo>
+            <capitulo numero_capitulos= "8"  numero_paginas="444"><contenido>Índice anomástico</contenido></capitulo>
+         </capitulos>
+         <sinopsis> 
+            LA INVENCION DE LOS LIBROS DEL MUNDO ANTIGUO
+         </sinopsis>
+   </libro>
+
+
+   <revista id="R9876" tipo_clase="coches" numero_paginas="120">
+          <titulo>Car</titulo>
+          <numero_revistas>24</numero_revistas>
+          <indice>Automóviles</indice>
+          <secciones>
+             <seccion numero_paginas="120"></seccion>
+             <seccion><contenido><a haref ="https://www.revistacar.es/"></a></contenido>
+          </secciones>
+   </revista>
+
+ 
+   <periódico id="P1597" tipo_clase="Nacional" fecha_de_publicación="04/05/1976">
+          <secciones> 
+             <seccion tipo_seccion="Nacional"></seccion>
+             <articulo autor="José Ortega Spottorno"></articulo>
+             <seccion><contenido><a haref ="https://elpais.com/"></a></contenido>
+          </secciones>
+          <indice>El periódico global</indice>
+   </periódico>
+        
+
+
+</biblioteca>
