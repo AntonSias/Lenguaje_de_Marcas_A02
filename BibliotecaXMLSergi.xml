@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Biblioteca>
+    <libros id="L2564" tipo_clase="didáctico" número_páginas="361">
+        <título >Historia de los griegos</título>
+        <capítulo número_páginas="10">
+            <título> Homero </título>
+            <contenido información="wikipedia"> Resumen del capítulo</contenido>
+        </capítulo>
+        
+        <índice> Estructura Texto</índice>
+        <sipnosis>Historia de los griegos constituye una obra inteligente y rigurosa ...</sipnosis>
+    </libros>
+
+    <revistas id="R5288" número_páginas="105">
+        <especialidad tipo_clase="otras">Cine</especialidad>
+        <título>Cahiers du cinema</título>
+        <número_revista>125</número_revista>
+        <sección número_páginas="5">
+            <contenido enlace_información="www.cahiersducinema.com">
+                www.cahiersducinema.com/entrevistas/almodovar</contenido>
+        </sección>
+    </revistas>
+
+    <periódico id="P6923" fecha_publicación="8-5-2023">
+        <clasifiación tipo_clase="NA">Nacional</clasifiación>
+        <sección tipo_sección="Economía">
+            <artículos autor="Julio López"> España en la encrucijada del pleno empleo</artículos>
+        </sección>
+        <contenido enlace_información= "www.elconfidencial.com"> www.elconfidencial.con/economía/españa_en_la_encrucijada </contenido>
+    </periódico>
+
+
+</Biblioteca>
