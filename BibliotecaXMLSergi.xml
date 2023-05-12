@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Biblioteca>
+  <libro id="L001" tipo_clase="novela" numero_paginas="200">
+    <titulo>Historia de los griegos</titulo>
+    <capitulo>
+      <titulo>Capitulo 1º Minos</titulo>
+      <contenido informacion="Personajes principales">Entramos en los inicios de la grecia antigua...</contenido>
+    </capitulo>
+    <capitulo>
+      <titulo>Capítulo 2 Schliemann</titulo>
+      <contenido informacion="El primer día en la Universidad">Falta poco para los hablar de los filosofos ..</contenido>
+    </capitulo>
+    <sinopsis>La contribución de Grecia a la civilizacion occidental es vasta y facinante.</sinopsis>
+    <indice>Prólogo, Capítulo 1, Capítulo 2, Capítulo 3, ...</indice>
+  </libro>
+  <revista id="R001" tipo="otras" numero_paginas="100">
+    <titulo>Cahiers du cinema</titulo>
+    <numero_revista>123</numero_revista>
+    <indice_contenido>Entrevistas, análisis, y crítica </indice_contenido>
+    <seccion numero_paginas="20" enlace_informacion="https://www.caimanediciones.es/entrevista-alberto-gastesi-version-ampliada-de-caiman-cdc-no-177/">
+      <contenido>Entrevista a Alberto Gastesi</contenido>
+    </seccion>
+    <seccion numero_paginas="30" enlace_informacion="https://www.caimanediciones.es/my-sunny-maad-michaela-pavlatova/">
+      <contenido>Crítica My Sunny Maad d</contenido>
+    </seccion>
+  </revista>
+  <periodico tipo_clase="nacional">
+    <seccion autor="Zarzalejos" tipo="sociedad">
+      <articulo>Una cura para el amor </articulo>
+      <articulo>David Suarez contra el humor</articulo>
+    </seccion>
+    <seccion autor="Josefina Molona " tipo="opinion">
+      <articulo>¿Por qué tantos adolescentes están solteros?</articulo>
+    </seccion>
+    <indice>Portada, Sociedad, Opinión</indice>
+    <contenido>Sumamos informacion y entretenimiento.</contenido>
+  </periodico>
+</Biblioteca>
