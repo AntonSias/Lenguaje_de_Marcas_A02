@@ -1,15 +1,18 @@
 
 <!ELEMENT Biblioteca (libro | revista | periodico)*>
+<!-- LIBRO-->
 <!ELEMENT libro (titulo, capitulo+, sinopsis, indice)>
 <!ATTLIST libro id CDATA #REQUIRED>
 <!ATTLIST libro tipo_clase CDATA #IMPLIED>
 <!ATTLIST libro numero_paginas CDATA #IMPLIED>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT capitulo (titulo, contenido)>
+<!ATTLIST capitulo numero_paginas CDATA #IMPLIED>
 <!ELEMENT contenido (#PCDATA)>
 <!ATTLIST contenido informacion CDATA #IMPLIED>
 <!ELEMENT sinopsis (#PCDATA)>
 <!ELEMENT indice (#PCDATA)>
+<!-- REVISTA-->
 <!ELEMENT revista (titulo, numero_revista, indice_contenido, seccionrevista+)>
 <!ATTLIST revista id ID #REQUIRED>
 <!ATTLIST revista tipo CDATA #IMPLIED>
@@ -18,14 +21,17 @@
 <!ELEMENT indice_contenido (#PCDATA)>
 <!ELEMENT seccionrevista (contenidorevista)>
 <!ATTLIST seccionrevista numero_paginas CDATA #IMPLIED>
-<!ATTLIST seccionrevista enlace_informacion CDATA #IMPLIED>
+<!ATTLIST contenidorevista enlace_informacion CDATA #IMPLIED>
 <!ATTLIST seccionrevista tipo CDATA #IMPLIED>
 <!ELEMENT contenidorevista (#PCDATA)>
+<!-- PERIÓDICO-->
 <!ELEMENT periodico (seccionperiodico+, indiceperiodico, contenidoperiodico)>
 <!ATTLIST periodico tipo_clase CDATA #IMPLIED>
+<!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
 <!ELEMENT seccionperiodico (articulo)* >
-<!ATTLIST seccionperiodico autor CDATA #IMPLIED>
-<!ATTLIST seccionperiodico tipo CDATA #IMPLIED>
+<!ATTLIST seccionperiodico tipo ID #REQUIRED>
 <!ELEMENT articulo (#PCDATA )>
+<!ATTLIST articulo autor CDATA #IMPLIED>
+<!ATTLIST articulo tipo CDATA #IMPLIED>
 <!ELEMENT indiceperiodico (#PCDATA)>
 <!ELEMENT contenidoperiodico (#PCDATA)>
