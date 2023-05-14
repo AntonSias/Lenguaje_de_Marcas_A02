@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UFT-8"?>
-<!DOCTYPE biblioteca SYSTEM "Biblioteca.dtd">
+<!DOCTYPE biblioteca SYSTEM "BibliotecaSilvian.dtd">
 <biblioteca>
 
    <libro id="L1234" tipo_clase="novela" numero_paginas="452" numero_capitulos="8" >
-         <titulo></titulo>
+         <titulo>El infinito en un junco</titulo>
          <capitulos>
             <capitulo numero_capitulos= "1"  numero_paginas="245"><contenido>Gracia imagina el futuro</contenido></capitulo>
             <capitulo numero_capitulos= "2"  numero_paginas="394"><contenido>Loa caminos de Roma</contenido></capitulo>
