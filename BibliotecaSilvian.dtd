@@ -1,97 +1,69 @@
 <?xml version="1.0" encoding="UFT-8"?>
 
 <!DOCTYPE Biblioteca [
-   <!ELEMENT Biblioteca (libro,revista,periódico)*>
-       <!ELEMENT libro(#PCDATA)>
-       <!ELEMENT revista(#PCDATA)>
-       <!ELEMENT periódico(#PCDATA)>
+   <!ELEMENT Biblioteca (libro|revista|periódico)*>
+
+<!ELEMENT libro (id, tipo_clase, numero_capitulos, numero_paginas, titulo, capitulos)>
+   <!ELEMENT id (#PCDATA)>
+   <!ELEMENT tipo_clase (#PCDATA)>
+   <!ELEMENT numero_capitulos (#PCDATA)>
+   <!ELEMENT numero_paginas (#PCDATA)>
+   <!ELEMENT titulo (#PCDATA)>
+   <!ELEMENT capitulos (capitulo*)>
+   <!ELEMENT capitulo (contenido, indice, sinopsis)>
+   <!ELEMENT contenido (#PCDATA)>
+   <!ELEMENT indice (#PCDATA)>
+   <!ELEMENT sinopsis (#PCDATA)>
+   <!ATTLIST libro id ID #REQUIRED>
+   <!ATTLIST libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+   <!ATTLIST libro numero_capitulos CDATA #REQUIRED>
+   <!ATTLIST libro numero_paginas CDATA #IMPLIED>
+   <!ATTLIST libro titulo CDATA #REQUIRED>
+   <!ATTLIST capitulo contenido CDATA #REQUIRED>
+   <!ATTLIST capitulo indice CDATA #REQUIRED>
+   <!ATTLIST capitulo sinopsis CDATA #REQUIRED>
+
+
+<!ELEMENT revista (id, tipo_clase, numero_paginas, titulo, numero_revistas, indice, secciones, contenido)>
+   <!ELEMENT id (#PCDATA)>
+   <!ELEMENT tipo_clase (#PCDATA)>
+   <!ELEMENT numero_paginas (#PCDATA)>
+   <!ELEMENT titulo (#PCDATA)>
+   <!ELEMENT numero_revistas (#PCDATA)>
+   <!ELEMENT indice (#PCDATA)>
+   <!ELEMENT secciones (#PCDATA)>
+   <!ELEMENT contenido (#PCDATA)>
+   <!ATTLIST revista id ID #REQUIRED>
+   <!ATTLIST revista tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED>
+   <!ATTLIST revista numero_paginas CDATA #REQUIRED>
+   <!ATTLIST revista titulo CDATA #REQUIRED>
+   <!ATTLIST revista numero_revistas CDATA #REQUIRED>
+   <!ATTLIST revista indice CDATA #REQUIRED>
+   <!ATTLIST revista secciones CDATA #REQUIRED>
+   <!ATTLIST revista contenido CDATA #REQUIRED>
+
+<!ELEMENT periodico (id, tipo_clase, fecha_de_publicacion, secciones, articulo, contenido, indice)>
+   <!ELEMENT id (#PCDATA)>
+   <!ELEMENT tipo_clase (#PCDATA)>
+   <!ELEMENT fecha_de_publicacion (#PCDATA)>
+   <!ELEMENT secciones (#PCDATA)>
+   <!ELEMENT tipo_seccion (#PCDATA)>
+   <!ELEMENT articulo (#PCDATA)>
+   <!ELEMENT contenido (#PCDATA)>
+   <!ELEMENT indice (#PCDATA)>
+   <!ATTLIST periodico id ID #REQUIRED>
+   <!ATTLIST periodico tipo_clase (nacional | internacional) #REQUIRED>
+   <!ATTLIST periodico fecha_de_publicacion CDATA #REQUIRED>
+   <!ATTLIST periodico secciones CDATA #REQUIRED>
+   <!ATTLIST periodico articulo CDATA #REQUIRED>
+   <!ATTLIST periodico contenido CDATA #REQUIRED>
+   <!ATTLIST periodico indice CDATA #REQUIRED>
 ]>
-
-<!DOCTYPE libro [
-   <!ELEMENT libro (id, tipo_clase, numero_capitulos,numero_paginas, ,titulo,capitulo,contenido,indice,sinopsis)*>
-       <!ELEMENT id(#PCDATA)>
-       <!ELEMENT tipo_clase(#PCDATA)>
-       <!ELEMENT numero_capitulos(#PCDATA)>
-       <!ELEMENT numero_paginas(#PCDATA)>
-       <!ELEMENT titulo(#PCDATA)>
-       <!ELEMENT capitulo(#PCDATA)>
-       <!ELEMENT contenido(#PCDATA)>
-       <!ELEMENT indice(#PCDATA)>
-       <!ELEMENT sinopsis(#PCDATA)>
-]>
-
-
-<!DOCTYPE revista [
-   <!ELEMENT revista (id, tipo_clase, ,numero_paginas, ,titulo,numero_revistas,indice,secciones,numero_paginas,contenido)*>
-       <!ELEMENT id(#PCDATA)>
-       <!ELEMENT tipo_clase(#PCDATA)>
-       <!ELEMENT numero_paginas(#PCDATA)>
-       <!ELEMENT titul(#PCDATA)>
-       <!ELEMENT numero_revistas(#PCDATA)>
-       <!ELEMENT indice(#PCDATA)>
-       <!ELEMENT secciones(#PCDATA)>
-       <!ELEMENT numero_paginas(#PCDATA)>
-       <!ELEMENT contenido(#PCDATA)>
-]>
-
-
-<!DOCTYPE periódico [
-   <!ELEMENT periódico (id,tipo_clase,fecha_de_publicación,secciones,tipo_seccion,articulo,contenido,indice)*>
-       <!ELEMENT id (#PCDATA)>
-       <!ELEMENT tipo_clase(#PCDATA)>
-       <!ELEMENT fecha_de_publicación(#PCDATA)>
-       <!ELEMENT secciones(#`PCDATA)>
-       <!ELEMENT tipo_seccion(#PCDATA)>
-       <!ELEMENT articulo(#PCDATA)>
-       <!ELEMENT contenido(#PCDATA)>
-       <!ELEMENT indice (#PCDATA)>
-]>
-
- <!--DEFINIMOS LOS ATRIBUTOS QUE APERTENECEN A LA ETIQUETA BIBLIOTECA -->
-  
-    <!ATTLIST biblioteca (libro|revista|periodico)>
-    <!ATTLIST biblioteca libro  (titulo, capitulos, indice, sinopsis)>
-    <!ATTLIST biblioteca revista (informatica | corazon| coches | investigacion | otras) #REQUIRED>
-    <!ATTLIST biblioteca periodico (internacional | nacional) #REQUIRED>
-    
-
- <!--DEFINIMOS LOS ATRIBUTOS QUE APERTENECEN A LA ETIQUETA LIBRO -->
-
-    <!ATTLIST libro id ID #REQUIRED>
-    <!ATTLIST libro tipo_clase (novela | infantil | didáctico)  #REQUIRED>
-    <!ATTLIST libro numero_capitulos CDATA #REQUIRED>
-    <!ATTLIST libro numero_paginas CDATA >
-    <!ATTLIST libro titul CDATA #REQUIRED>
-    <!ATTLIST libro capitulo CDATA #REQUIRED>
-    <!ATTLIST libro contenido CDATA #REQUIRED>
-    <!ATTLIST libro indice CDATA #REQUIRED>
-    <!ATTLIST libro sinopsis CDATA #REQUIRED>
-  
-<!--DEFINIMOS LOS ATRIBUTOS QUE APERTENECEN A LA ETIQUETA REVISTA -->
-    
-    <!ATTLIST revista id ID #REQUIRED>
-    <!ATTLIST revista tipo_clase(informatica | corazon | coches | investigacion | otras) #REQUIRED>
-    <!ATTLIST revista numero_paginas #REQUIRED>
-    <!ATTLIST revista titulo #REQUIRED>
-    <!ATTLIST revista numero_revistas #REQUIRED>
-    <!ATTLIST revista indice CDATA #REQUIRED>
-    <!ATTLIST revista secciones CDATA #REQUIRED>
-    <!ATTLIST revista contenido CDATA #REQUIRED>
-
-<!--DEFINIMOS LOS ATRIBUTOS QUE APERTENECEN A LA ETIQUETA PERIODICO -->
-
-    <!ATTLIST periodico id ID #REQUIRED>
-    <!ATTLIST periodico tipo_clase(nacional | internacional) #REQUIRED>
-    <!ATTLIST periodico fecha_de_publicación CDATA #REQUIRED>
-    <!ATTLIST periodico secciones CDATA #REQUIRED>
-    <!ATTLIST periodico contenido  CDATA #REQUIRED>
-    <!ATTLIST periodico indice CDATA #REQUIRED>
-
 
 <biblioteca>
 
    <libro id="L1234" tipo_clase="novela"  numero_capitulos="8" numero_paginas="452" >
-         <titulo></titulo>
+         <titulo>El infinito en un junco</titulo>
          <capitulos>
             <capitulo numero_capitulos= "1"  numero_paginas="245"><contenido>Gracia imagina el futuro</contenido></capitulo>
             <capitulo numero_capitulos= "2"  numero_paginas="394"><contenido>Loa caminos de Roma</contenido></capitulo>
